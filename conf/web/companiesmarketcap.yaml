@@ -3,9 +3,20 @@
 
 user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"
 parser: "lxml"
-companies_url: "https://companiesmarketcap.com/?page="
+companies_url: "https://companiesmarketcap.com"
+page_param: "/?page="
+companies_by:
+  - by: "marketcap"
+    category : ""
+  - by: "profit"
+    category : "/most-profitable-companies"
+  - by: "revenue"
+    category : "/largest-companies-by-revenue"
+  - by: "employees"
+    category : "/largest-companies-by-number-of-employees"
+
 # companies_url: "https://companiesmarketcap.com/usa/largest-companies-in-the-usa-by-market-cap/?page="
 ticker_url: "https://finance.yahoo.com/quote/"
 output_filename: "_companies_"
-max_companies: 500
-start_from: 6001
+max_companies: 10
+start_from: 1

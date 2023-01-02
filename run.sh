@@ -2,8 +2,9 @@
 
 if command -v caffeinate &> /dev/null
 then
-    echo "<caffeinate> found"
+    echo "<caffeinate> activated"
     caffeinate -i -w $$ &
 fi
 
-python companies.py
+echo "Scraping companies finance details"
+python scrape_companies_stock.py
