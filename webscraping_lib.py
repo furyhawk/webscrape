@@ -11,6 +11,11 @@ class WebConfig:
     parser: str = "lxml"
     companies_url: str = MISSING
     ticker_url: str = MISSING
+    page_param: str = MISSING
+    companies_by: list = MISSING
+    # companies_by_profit: str = MISSING
+    # companies_by_revenue: str = MISSING
+    # companies_by_employees: str = MISSING
     output_filename: str = MISSING
 
 
