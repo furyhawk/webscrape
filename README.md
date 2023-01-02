@@ -10,6 +10,7 @@
   * [HTML (Optional)](#html-optional)
   * [Web Scraping Workflow](#web-scraping-workflow)
   * [Ethics of Web Scraping](#ethics-of-web-scraping)
+  * [Credits](#credits)
 <!--te-->
 
 <br>
@@ -90,7 +91,6 @@ HTML documents can be styled using CSS (Cascading Style Sheets). CSS is a separa
 
 HTML5 is the latest version of HTML, and it includes new features such as support for video and audio playback, the ability to draw graphics using the canvas element, and new form elements.
 
-
 <br>
   
 ## Web Scraping Workflow
@@ -137,5 +137,7 @@ There are a few ethical considerations to keep in mind when performing web scrap
 Overall, the ethics of web scraping depend on the specific context in which it is being performed. It is important to be mindful of the potential impact of your actions and to act responsibly when scraping websites.
 
 <br>
+
+## Credits
 
 These resources should provide a good starting point for learning more about web scraping. I hope they are helpful!
