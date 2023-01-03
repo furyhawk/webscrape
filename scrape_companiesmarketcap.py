@@ -46,7 +46,7 @@ def scrape_companiesmarketcap(
         "ticker",
         f"{companies_by.by}",
         "price",
-        "daily Change",
+        "daily change",
         "country",
     ]
     df: pd.DataFrame = pd.DataFrame(columns=columns)
@@ -127,7 +127,7 @@ def scrape_companiesmarketcap(
                 "ticker": tickers,
                 f"{companies_by.by}": by_value,
                 "price": prices,
-                "daily Change": changes,
+                "daily change": changes,
                 "country": countries,
             }
         )

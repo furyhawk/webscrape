@@ -13,9 +13,6 @@ class WebConfig:
     ticker_url: str = MISSING
     page_param: str = MISSING
     companies_by: list = MISSING
-    # companies_by_profit: str = MISSING
-    # companies_by_revenue: str = MISSING
-    # companies_by_employees: str = MISSING
     output_filename: str = MISSING
 
 
@@ -25,10 +22,20 @@ class CompaniesMarketCapConfig(WebConfig):
     start_from: int = MISSING
 
 
+@dataclass
+class DataConfig:
+    data_dir: str = MISSING
+
+
 def register_configs() -> None:
     cs: ConfigStore = ConfigStore.instance()
     cs.store(
         group="webscraping_lib/web",
         name="companiesmarketcap",
         node=CompaniesMarketCapConfig,
+    )
+    cs.store(
+        group="webscraping_lib/data",
+        name="companiesmarketcapdata",
+        node=DataConfig,
     )

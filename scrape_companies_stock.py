@@ -194,7 +194,7 @@ def scrape_stocks_info(num_stocks: int, start_num: int, cfg: DictConfig) -> None
     config_path="conf",
     config_name="config",
 )
-def app(cfg: DictConfig) -> None:
+def main(cfg: DictConfig) -> None:
     logger.info(OmegaConf.to_yaml(cfg))
     scrape_stocks_info(
         num_stocks=cfg.web.max_companies, start_num=cfg.web.start_from, cfg=cfg
@@ -202,4 +202,4 @@ def app(cfg: DictConfig) -> None:
 
 
 if __name__ == "__main__":
-    app()
+    main()
