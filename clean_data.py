@@ -20,6 +20,8 @@ class Config:
     web: webscraping_lib.CompaniesMarketCapConfig = MISSING
     data: webscraping_lib.DataConfig = MISSING
     debug: bool = False
+    project_name: str = ""
+    outdir: str = ""
 
 
 cs: ConfigStore = ConfigStore.instance()

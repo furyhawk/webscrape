@@ -18,7 +18,7 @@ from omegaconf import MISSING, OmegaConf, DictConfig
 import hydra
 
 from hydra.core.config_store import ConfigStore
-
+from hydra.core.hydra_config import HydraConfig
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -26,7 +26,10 @@ logger: logging.Logger = logging.getLogger(__name__)
 @dataclass
 class Config:
     web: webscraping_lib.CompaniesMarketCapConfig = MISSING
+    data: webscraping_lib.DataConfig = MISSING
     debug: bool = False
+    project_name: str = ""
+    outdir: str = ""
 
 
 cs: ConfigStore = ConfigStore.instance()
@@ -150,6 +153,8 @@ def scrape_companiesmarketcap(
 )
 def main(cfg: DictConfig) -> None:
     logger.info(OmegaConf.to_yaml(cfg))
+    print(HydraConfig.get().runtime.output_dir)
+
     for category in cfg.web.companies_by:
         scrape_companiesmarketcap(
             num_stocks=cfg.web.max_companies,
